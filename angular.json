@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/florystyka-w-pytaniach",
+            "baseHref": "/Florystyka-w-pytaniach/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -35,8 +36,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ],
               "outputHashing": "all"
@@ -79,6 +80,9 @@
             ],
             "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

@@ -1,5 +1,5 @@
-# Florystyka W Pytaniach
-### Floristry In Questions
+# Florystyka w pytaniach
+### Floristry in questions
 
 ## General Info
 This is an educational application featuring test questions for both amateur and professional florists, along with thematic video tutorials.
@@ -24,7 +24,7 @@ To run this project locally:
 * Navigate to the project directory and install dependencies: `npm install`
 * Start the development server by running `ng serve`, then navigate to `http://localhost:4200/` in your browser to view the application.
 
-Alternatively, you can access the deployed application by clicking this [link](https://piotr-woz.github.io/Florystyka-w-pytaniach).
+Alternatively, you can access the deployed application by clicking this [link](https://piotr-woz.github.io/Florystyka-w-pytaniach/).
 
 ## Technologies Used
 This project was generated with **Angular - version 17.3.5.** ([Angular CLI link](https://github.com/angular/angular-cli)) and built using:
