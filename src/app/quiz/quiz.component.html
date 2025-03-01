@@ -8,16 +8,7 @@
     <p>{{ title }}</p>
     <ul>
       <li *ngFor="let answer of answers; let i = index">
-        <label [for]="i"
-          ><input
-            type="radio"
-            name="answers"
-            [id]="i"
-            [value]="i"
-            (change)="onChange($event)"
-          />
-          {{ answer }}</label
-        >
+        <label [for]="i"><input type="radio" name="answers" [id]="i" [value]="i" (change)="onChange($event)"/>{{ answer }}</label>
       </li>
       <li>{{ answerAlert }}</li>
     </ul>

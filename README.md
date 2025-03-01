@@ -1,31 +1,35 @@
 # Florystyka W Pytaniach
 ### Floristry In Questions
 
-## General info
-This is an educational application containing test questions for both amateur and professional florists, plus thematic video tutorials.
+## General Info
+This is an educational application featuring test questions for both amateur and professional florists, along with thematic video tutorials.
 
-#### The project consists of the following sections:
-* **Home page:** Here you enter your name and choose the number of test questions (5, 10 or 15). Additionally, you can enable random selection of questions.
-The last option is to go to the floristic education section with videos (YouTube Data API has been used).
-* **Quiz section with test questions:** Main section with questions and four answers to each of them. Some questions include supporting drawings.
-In order to go to the next question just click the "next" button.
-* **Test summary section:** After completing the test, you will see information about your result and receive a detailed report indicating which answers are actually correct.
+### The project consists of the following sections:
+* **Home page:** Enter your name and select the number of test questions (5, 10 or 15). Additionally, you can enable a random selection of questions.
+The last option allows you to access the floristry education section with video tutorials (integrated using the YouTube Data API).
+* **Quiz section:** The main section contains multiple-choice questions, each with four possible answers. Some questions include supporting illustrations.
+To proceed to the next question, simply click the "Next" button.
+* **Test summary:** After completing the test, you will receive your score along with a detailed report indicating the correct answers.
 
-All inscriptions on the website are in Polish.
+All text on the website is in Polish.
 
-#### Other features:
-* Click on the header logo to return to the home page at any time.
-* The application is **responsive** and can be used on desktop computers, tablets and smartphones.
-* I took all the background photos myself.
+### Additional Features:
+* Clicking the header logo allows you to return to the home page at any time.
+* The application is **fully responsive** and works seamlessly on desktop computers, tablets, and smartphones.
+* All background photos were taken by me.
 
-## Running the page
-To run this project:
-* run `ng serve` for a dev server and navigate to `http://localhost:4200/` or
-* click this [link](https://piterbud.github.io/Florystyka-w-pytaniach/)
+## Installation and Running the Application
+To run this project locally:
+* Clone the repository to your computer: `https://github.com/piotr-woz/Florystyka-w-pytaniach.git`
+* Navigate to the project directory and install dependencies: `npm install`
+* Start the development server by running `ng serve`, then navigate to `http://localhost:4200/` in your browser to view the application.
 
-## Technologies
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5. and of course with:
-* TypeScript
-* HTML
-* CSS
-* Bootstrap 5
+Alternatively, you can access the deployed application by clicking this [link](https://piotr-woz.github.io/Florystyka-w-pytaniach).
+
+## Technologies Used
+This project was generated with **Angular - version 17.3.5.** ([Angular CLI link](https://github.com/angular/angular-cli)) and built using:
+
+* Typescript 5.4.2
+* HTML5
+* CSS3
+* Bootstrap 5.3.3
