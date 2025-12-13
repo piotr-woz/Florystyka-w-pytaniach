@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { VideoListComponent } from '../education/video-list/video-list.component';
+// import { VideoListComponent } from '../education/video-list/video-list.component';
 import { QuizComponent } from '../quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, VideoListComponent, QuizComponent, FormsModule],
+  imports: [CommonModule, HeaderComponent, QuizComponent, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -31,17 +31,17 @@ export class HomeComponent implements OnInit {
   onOffMessage: string = 'wyłączona';
 
   ngOnInit() {
-    this.backToVideoList_start();
+    // this.backToVideoList_start();
     setTimeout(() => { this.showHomePage = true }, 25);
     setTimeout(() => { this.showHomePageBox = true }, 900);
   }
 
-  backToVideoList_start(): void {
-    if (sessionStorage.getItem("value") === "back") {
-      this.goToVideoEducation = true;
-    }
-    sessionStorage.clear();
-  }
+  // backToVideoList_start(): void {
+  //   if (sessionStorage.getItem("value") === "back") {
+  //     this.goToVideoEducation = true;
+  //   }
+  //   sessionStorage.clear();
+  // }
 
   startQuiz(numberOfQuestions: number): void {
     this.userName = this.enteredName;

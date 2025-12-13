@@ -1,31 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ApiService } from '../api.service';
+// import { Component, OnInit } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+// import { ApiService } from '../api.service';
 
-import { SingleVideoInterface } from '../interfaces/single-video.interface';
+// import { SingleVideoInterface } from '../interfaces/single-video.interface';
 
-@Component({
-  selector: 'app-video-list',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './video-list.component.html',
-  styleUrl: './video-list.component.css'
-})
-export class VideoListComponent implements OnInit {
-  showVideoComponent: boolean = false;
+// @Component({
+//   selector: 'app-video-list',
+//   standalone: true,
+//   imports: [CommonModule],
+//   templateUrl: './video-list.component.html',
+//   styleUrl: './video-list.component.css'
+// })
+// export class VideoListComponent implements OnInit {
+//   showVideoComponent: boolean = false;
 
-  playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
+//   playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
 
-  playlistAuthor: string = '';
-  playlistItems: SingleVideoInterface[] = [];
+//   playlistAuthor: string = '';
+//   playlistItems: SingleVideoInterface[] = [];
 
-  constructor(private apiService: ApiService) {}
+//   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    this.apiService.getPlayListItems(this.playlistId).subscribe((pl_items) => {
-      this.playlistItems = pl_items.items;
-      this.playlistAuthor = pl_items.items[0].snippet.channelTitle;
-    });
-    setTimeout(() => { this.showVideoComponent = true }, 300);
-  }
-}
+//   ngOnInit(): void {
+//     this.apiService.getPlayListItems(this.playlistId).subscribe((pl_items) => {
+//       this.playlistItems = pl_items.items;
+//       this.playlistAuthor = pl_items.items[0].snippet.channelTitle;
+//     });
+//     setTimeout(() => { this.showVideoComponent = true }, 300);
+//   }
+// }
