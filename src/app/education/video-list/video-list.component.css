@@ -1,5 +1,5 @@
-/* .video_component_start {
-  opacity: .0;
+.video_component_start {
+  opacity: 0;
 }
 
 .video_component_end {
@@ -13,13 +13,13 @@
   text-align: center;
   font-family: "Poetsen One", sans-serif;
   font-size: 3rem;
-  color: #B5B76B;
+  color: #b5b76b;
 }
 
 .video_list_box {
   margin: 0;
   padding: 0 5px;
-  border: 2px solid #B5B76B;
+  border: 2px solid #b5b76b;
   border-radius: 6px;
 }
 
@@ -39,10 +39,10 @@
   display: block;
   width: 40px;
   margin: 15px auto 20px auto;
-  color: #CCB4D4;
+  color: #ccb4d4;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #CCB4D4;
+  box-shadow: 0 0 0 3px #ccb4d4;
 }
 
 .home_page_link_symbol {
@@ -83,4 +83,4 @@
   .video_list_header {
     font-size: 2rem;
   }
-} */
+}

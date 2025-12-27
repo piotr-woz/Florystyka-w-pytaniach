@@ -2,7 +2,6 @@
   padding: 0;
 }
 
-
 /* home page */
 .home_page {
   display: flex;
@@ -75,7 +74,6 @@
   }
 }
 
-
 /* home page box */
 .home_page_box_start {
   position: relative;
@@ -88,7 +86,7 @@
   padding: 25px;
   background-color: rgba(20, 20, 20, 0.65);
   border-radius: 6px;
-  opacity: .0;
+  opacity: 0;
 }
 
 .home_page_box_end {
@@ -124,7 +122,6 @@
   transition: all 0.8s ease-out;
 }
 
-
 /* home page form */
 .home_page_form {
   width: 80%;
@@ -143,7 +140,7 @@
 }
 
 .home_page_form p:nth-of-type(2) {
-  color: #CCB4D4;
+  color: #ccb4d4;
 }
 
 .home_page_form input {
@@ -188,8 +185,8 @@
   font-size: 3rem;
   font-weight: bold;
   color: black;
-  border: 2px solid #CCB4D4;
-  background-color: rgba(250, 250, 250, .6);
+  border: 2px solid #ccb4d4;
+  background-color: rgba(250, 250, 250, 0.6);
   background-blend-mode: screen;
 }
 
@@ -205,7 +202,7 @@
   height: 30px;
   margin: 10px auto 0 auto;
   font-size: 1.5rem;
-  color: #CCB4D4;
+  color: #ccb4d4;
   border: none;
   background-color: transparent;
 }
@@ -219,7 +216,7 @@
   margin: 0 auto;
 }
 
-.random_questions_button div>span {
+.random_questions_button div > span {
   display: block;
   text-align: left;
 }
@@ -230,7 +227,7 @@
 }
 
 .random_questions_button_on {
-  color: #5FD35F !important;
+  color: #5fd35f !important;
 }
 
 .video_education_button {
@@ -239,8 +236,8 @@
   line-height: 3.5rem;
   margin: 24px auto 16px auto;
   font-size: 2.5rem;
-  color: #B5B76B;
-  border: 2px solid #B5B76B;
+  color: #b5b76b;
+  border: 2px solid #b5b76b;
   background-color: transparent;
 }
 
@@ -260,7 +257,6 @@
   left: 5px;
 }
 
-
 @media (max-width: 992px) {
   .home_page_form input {
     width: 80%;
@@ -274,7 +270,7 @@
 @media (max-width: 768px) {
   .home_page_box_start {
     margin-top: 100px;
-    background-color: rgba(20, 20, 20, 0.50);
+    background-color: rgba(20, 20, 20, 0.5);
   }
 
   .home_page_box_quiz_change {
@@ -322,7 +318,7 @@
 
 @media (max-width: 470px) {
   .home_page_box_start {
-      margin-top: 135px;
+    margin-top: 135px;
   }
 
   .home_page_form {
@@ -354,9 +350,8 @@
   }
 }
 
-
 @media (orientation: landscape) and (max-height: 650px) {
-    .home_page_form p {
+  .home_page_form p {
     margin: 8px auto;
     text-align: center;
     font-size: 2.3rem;
@@ -397,14 +392,13 @@
   }
 }
 
-
 /* home page motto */
 .home_page_motto {
   margin: 20px 150px 0 0;
   padding-bottom: 20px;
 }
 
-.home_page_motto>p {
+.home_page_motto > p {
   text-align: right;
   font-family: "Kalam", cursive;
   font-size: 1.8rem;
@@ -412,7 +406,7 @@
   margin-bottom: 0px;
 }
 
-.home_page_motto>p:last-child {
+.home_page_motto > p:last-child {
   margin-right: 30px;
   font-size: 1.4rem;
 }
@@ -430,7 +424,7 @@
 }
 
 @media (max-width: 768px) {
-  .home_page_motto>p span {
+  .home_page_motto > p span {
     display: block;
   }
 }
@@ -445,12 +439,12 @@
     padding-bottom: 0;
   }
 
-  .home_page_motto>p {
-    color: #CCB4D4;
+  .home_page_motto > p {
+    color: #ccb4d4;
     font-size: 1.6rem;
   }
 
-  .home_page_motto>p:last-child {
+  .home_page_motto > p:last-child {
     font-size: 1.2rem;
   }
 }
@@ -460,11 +454,11 @@
     margin: 0px 80px 0 0;
   }
 
-  .home_page_motto>p {
+  .home_page_motto > p {
     font-size: 1.6rem;
   }
 
-  .home_page_motto>p:last-child {
+  .home_page_motto > p:last-child {
     font-size: 1.2rem;
   }
 }

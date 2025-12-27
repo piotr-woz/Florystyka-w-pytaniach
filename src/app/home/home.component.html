@@ -1,104 +1,63 @@
 <app-header></app-header>
 
 <section class="container-fluid">
-  <div
-    class="home_page row"
-    [ngClass]="{
+  <div class="home_page row" [ngClass]="{
       background_image: showHomePage,
       background_for_first_questions: goToFirstQuestions,
       background_for_second_questions: goToSecondQuestions,
       background_for_third_questions: goToThirdQuestions,
       home_page_summary_change: goToQuizSummary
-    }"
-  >
-    <!-- <app-video-list *ngIf="goToVideoEducation"></app-video-list> -->
+    }">
+    <app-video-list *ngIf="goToVideoEducation"></app-video-list>
 
-    <div
-      *ngIf="!goToVideoEducation"
-      class="home_page_box_start col-md-10 col-lg-8 col-xxl-6"
-      [ngClass]="{
+    <div *ngIf="!goToVideoEducation" class="home_page_box_start col-md-10 col-lg-8 col-xxl-6" [ngClass]="{
         home_page_box_end: showHomePageBox,
         home_page_box_quiz_change: goToQuestions,
         home_page_box_summary_change: goToQuizSummary,
         home_page_box_summary_report_change: goToQuizSummaryReport
-      }"
-    >
+      }">
       <div class="home_page_form" *ngIf="!goToQuestions">
         <p>Wpisz swoje imię / nick:</p>
-        <input
-          class="rounded"
-          type="text"
-          [placeholder]="nameAlert"
-          [(ngModel)]="enteredName"
-        />
+        <input class="rounded" type="text" [placeholder]="nameAlert" [(ngModel)]="enteredName" />
 
         <p>Wybierz ilość pytań:</p>
-        <button
-          class="start_quiz_button rounded"
-          id="start_quiz_button_1"
-          (click)="startQuiz(5)"
-        >
+        <button class="start_quiz_button rounded" id="start_quiz_button_1" (click)="startQuiz(5)">
           5
         </button>
-        <button
-          class="start_quiz_button rounded"
-          id="start_quiz_button_2"
-          (click)="startQuiz(10)"
-        >
+        <button class="start_quiz_button rounded" id="start_quiz_button_2" (click)="startQuiz(10)">
           10
         </button>
-        <button
-          class="start_quiz_button rounded"
-          id="start_quiz_button_3"
-          (click)="startQuiz(15)"
-        >
+        <button class="start_quiz_button rounded" id="start_quiz_button_3" (click)="startQuiz(15)">
           15
         </button>
 
-        <button
-          class="random_questions_button rounded"
-          (click)="randomQuestions()"
-        >
+        <button class="random_questions_button rounded" (click)="randomQuestions()">
           <div>
-            <span
-              >Losowa kolejność pytań:
-              <span
-                class="random_question_button_message"
-                [ngClass]="{
+            <span>Losowa kolejność pytań:
+              <span class="random_question_button_message" [ngClass]="{
                   random_questions_button_on: turnOnRandomQuestions
-                }"
-                >{{ onOffMessage }}</span
-              >
+                }">{{ onOffMessage }}</span>
             </span>
           </div>
         </button>
 
-        <button
-          class="video_education_button rounded"
-          (click)="videoEducation()"
-        >
+        <button class="video_education_button rounded" (click)="videoEducation()">
           <span>Edukacja florystyczna</span>
           <span class="material-symbols-outlined">videocam</span>
         </button>
       </div>
 
-      <app-quiz
-        [goToQuestions]="goToQuestions"
-        [numberOfQuestions]="numberOfQuestions"
-        [userName]="userName"
-        [turnOnRandomQuestions]="turnOnRandomQuestions"
-        *ngIf="goToQuestions"
+      <app-quiz [goToQuestions]="goToQuestions" [numberOfQuestions]="numberOfQuestions" [userName]="userName"
+        [turnOnRandomQuestions]="turnOnRandomQuestions" *ngIf="goToQuestions"
         (backgroundChangedSecondTime)="secondBackgroundChange($event)"
         (backgroundChangedThirdTime)="thirdBackgroundChange($event)"
         (quizSummaryStarted)="homePageBoxSummaryChange($event)"
-        (quizSummaryReportStarted)="homePageBoxSummaryReportChange($event)"
-      ></app-quiz>
+        (quizSummaryReportStarted)="homePageBoxSummaryReportChange($event)"></app-quiz>
     </div>
 
     <div class="home_page_motto" *ngIf="!goToQuestions && !goToVideoEducation">
       <p>
-        <span>&bdquo;Jeśli umiecie patrzeć, zobaczycie,</span
-        ><span> że cały świat jest ogrodem&rdquo;</span>
+        <span>&bdquo;Jeśli umiecie patrzeć, zobaczycie,</span><span> że cały świat jest ogrodem&rdquo;</span>
       </p>
       <p>Frances Hodgdon Burnett</p>
     </div>

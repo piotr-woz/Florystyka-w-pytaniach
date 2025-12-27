@@ -1,16 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-// import { VideoListComponent } from '../education/video-list/video-list.component';
+import { VideoListComponent } from '../education/video-list/video-list.component';
 import { QuizComponent } from '../quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, QuizComponent, FormsModule],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    QuizComponent,
+    FormsModule,
+    VideoListComponent,
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
   showHomePage: boolean = false;
@@ -32,8 +38,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // this.backToVideoList_start();
-    setTimeout(() => { this.showHomePage = true }, 25);
-    setTimeout(() => { this.showHomePageBox = true }, 900);
+    setTimeout(() => {
+      this.showHomePage = true;
+    }, 25);
+    setTimeout(() => {
+      this.showHomePageBox = true;
+    }, 900);
   }
 
   // backToVideoList_start(): void {
@@ -48,7 +58,7 @@ export class HomeComponent implements OnInit {
     if (this.userName.length > 0) {
       this.goToQuestions = true;
       this.numberOfQuestions = numberOfQuestions;
-      setTimeout(()=> {
+      setTimeout(() => {
         this.goToFirstQuestions = true;
       }, 1250);
     } else {
@@ -61,17 +71,19 @@ export class HomeComponent implements OnInit {
 
   randomQuestions(): void {
     this.turnOnRandomQuestions = !this.turnOnRandomQuestions;
-    this.turnOnRandomQuestions ? this.onOffMessage = "włączona" : this.onOffMessage = "wyłączona";
+    this.turnOnRandomQuestions
+      ? (this.onOffMessage = 'włączona')
+      : (this.onOffMessage = 'wyłączona');
   }
 
   secondBackgroundChange(goToSecondQuestions: boolean): void {
-    setTimeout(()=> {
+    setTimeout(() => {
       this.goToSecondQuestions = goToSecondQuestions;
     }, 300);
   }
 
   thirdBackgroundChange(goToThirdQuestions: boolean): void {
-    setTimeout(()=> {
+    setTimeout(() => {
       this.goToThirdQuestions = goToThirdQuestions;
     }, 300);
   }

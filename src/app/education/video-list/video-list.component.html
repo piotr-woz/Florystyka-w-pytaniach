@@ -1,31 +1,19 @@
-<!-- <div
-  class="video_component_start container"
-  [ngClass]="{ video_component_end: showVideoComponent }"
->
+<div class="video_component_start container" [ngClass]="{ video_component_end: showVideoComponent }">
   <header class="video_list_header">
     <span>Edukacja florystyczna z </span><span>{{ playlistAuthor }}</span>
   </header>
 
   <div class="video_list_box">
     <div class="video_list row">
-      <section
-        class="single_video col-sm-6 col-md-4 col-lg-3"
-        *ngFor="let item of playlistItems"
-      >
+      <section class="single_video col-sm-6 col-md-4 col-lg-3" *ngFor="let item of playlistItems">
         <a [href]="'video?id=' + item.snippet.resourceId.videoId">
-          <img
-            class="thumbnail"
-            [src]="item.snippet.thumbnails.medium.url"
-            [alt]="item.snippet.title"
-          />
+          <img class="thumbnail" [src]="item.snippet.thumbnails.medium.url" [alt]="item.snippet.title" />
         </a>
       </section>
     </div>
   </div>
 
   <a href="home" class="home_page_link">
-    <span class="material-symbols-outlined home_page_link_symbol"
-      >arrow_back_ios</span
-    >
+    <span class="material-symbols-outlined home_page_link_symbol">arrow_back_ios</span>
   </a>
-</div> -->
+</div>
