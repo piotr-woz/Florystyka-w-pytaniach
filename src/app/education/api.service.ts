@@ -4,7 +4,10 @@ import { Observable } from 'rxjs';
 import { PlaylistItemsInterface } from './interfaces/playlist-items.interface';
 
 // Add your YouTube API key here if you want to call the API directly
+// Remember to keep your API key secure and not expose it in the client-side code
 // Uncomment the following line and the getPlayListItems method below to use direct API calls
+// Comment out the proxy method if using direct API calls
+
 // const YOUTUBE_API_KEY = 'YOUR_API_KEY_HERE';
 
 @Injectable({
