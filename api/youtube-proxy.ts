@@ -56,6 +56,7 @@ module.exports = async (request: any, response: any) => {
   }
 };
 
+// To run this function locally with Vercel, follow these steps:
 // npm install -D vercel
 // npm install -D @vercel/node
 // npm install dotenv

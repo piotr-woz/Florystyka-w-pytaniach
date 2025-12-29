@@ -22,9 +22,12 @@ All text on the website is in Polish.
 To run this project locally:
 * Clone the repository to your computer: `https://github.com/piotr-woz/Florystyka-w-pytaniach.git`
 * Navigate to the project directory and install dependencies: `npm install`
-* Start the development server by running `ng serve`, then navigate to `http://localhost:4200/` in your browser to view the application.
+* Create a `.env.local` file in the root of the project and add your YouTube API key:
+  YOUTUBE_API_KEY=YOUR_YOUTUBE_API_KEY_HERE
+* Start the development server by running `npx vercel dev`, then navigate to `http://localhost:3000/` in your browser to view the application.
+* The serverless function will proxy requests to the YouTube API using your API key securely.
 
-Alternatively, you can access the deployed application by clicking this [link](https://piotr-woz.github.io/Florystyka-w-pytaniach/).
+Alternatively, you can access the deployed application by clicking this [link](https://florystyka-w-pytaniach.vercel.app/).
 
 ## Technologies Used
 This project was generated with **Angular - version 17.3.5.** ([Angular CLI link](https://github.com/angular/angular-cli)) and built using:
