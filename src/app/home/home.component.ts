@@ -37,7 +37,8 @@ export class HomeComponent implements OnInit {
   onOffMessage: string = 'wyłączona';
 
   ngOnInit() {
-    // this.backToVideoList_start();
+    // to remove!!!
+    this.backToVideoList_start();
     setTimeout(() => {
       this.showHomePage = true;
     }, 25);
@@ -46,12 +47,13 @@ export class HomeComponent implements OnInit {
     }, 900);
   }
 
-  // backToVideoList_start(): void {
-  //   if (sessionStorage.getItem("value") === "back") {
-  //     this.goToVideoEducation = true;
-  //   }
-  //   sessionStorage.clear();
-  // }
+  // to remove!!!
+  backToVideoList_start(): void {
+    if (sessionStorage.getItem('value') === 'back') {
+      this.goToVideoEducation = true;
+    }
+    sessionStorage.clear();
+  }
 
   startQuiz(numberOfQuestions: number): void {
     this.userName = this.enteredName;
