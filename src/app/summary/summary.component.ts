@@ -10,7 +10,7 @@ import { Question } from '../quiz/question.model';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './summary.component.html',
-  styleUrl: './summary.component.css'
+  styleUrl: './summary.component.scss'
 })
 export class SummaryComponent implements OnInit {
   questionList: Question[] = [];

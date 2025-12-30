@@ -9,7 +9,7 @@ import { SingleVideoInterface } from '../interfaces/single-video.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './video-list.component.html',
-  styleUrl: './video-list.component.css',
+  styleUrl: './video-list.component.scss',
 })
 export class VideoListComponent implements OnInit {
   showVideoComponent: boolean = false;

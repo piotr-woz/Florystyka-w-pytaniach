@@ -12,7 +12,7 @@ import { Question } from './question.model';
   standalone: true,
   imports: [CommonModule, FormsModule, SummaryComponent],
   templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.css'
+  styleUrl: './quiz.component.scss'
 })
 export class QuizComponent implements OnInit {
   @Input() goToQuestions: boolean;

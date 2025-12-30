@@ -22,7 +22,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           },
@@ -76,7 +76,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           }

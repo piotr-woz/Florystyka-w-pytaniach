@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     VideoListComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
   showHomePage: boolean = false;

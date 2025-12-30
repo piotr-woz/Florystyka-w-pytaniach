@@ -7,7 +7,7 @@ import { SafePipe } from '../../safe.pipe';
   standalone: true,
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
-  styleUrl: './video-frame.component.css',
+  styleUrl: './video-frame.component.scss',
 })
 export class VideoFrameComponent implements OnInit {
   videoId = '';
