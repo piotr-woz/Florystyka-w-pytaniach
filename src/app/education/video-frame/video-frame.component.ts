@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SafePipe } from '../../safe.pipe';
 
@@ -7,13 +7,13 @@ import { SafePipe } from '../../safe.pipe';
   standalone: true,
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
-  styleUrl: './video-frame.component.scss'
+  styleUrl: './video-frame.component.css',
 })
 export class VideoFrameComponent implements OnInit {
   videoId = '';
   videoUrl = '';
 
-  constructor(private route: ActivatedRoute) {}
+  private route = inject(ActivatedRoute);
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((item) => {
@@ -23,6 +23,6 @@ export class VideoFrameComponent implements OnInit {
   }
 
   backToVideoList(): void {
-    sessionStorage.setItem("value", "back");
+    sessionStorage.setItem('value', 'back');
   }
 }

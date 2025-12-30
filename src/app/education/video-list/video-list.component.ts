@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
@@ -19,7 +19,7 @@ export class VideoListComponent implements OnInit {
   playlistAuthor: string = '';
   playlistItems: SingleVideoInterface[] = [];
 
-  constructor(private apiService: ApiService) {}
+  private apiService = inject(ApiService);
 
   ngOnInit(): void {
     this.apiService.getPlayListItems(this.playlistId).subscribe((pl_items) => {
