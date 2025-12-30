@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PlaylistItemsInterface } from './interfaces/playlist-items.interface';
@@ -14,7 +14,7 @@ import { PlaylistItemsInterface } from './interfaces/playlist-items.interface';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   // getPlayListItems(playlistId: string): Observable<PlaylistItemsInterface> {
   //   const url = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${YOUTUBE_API_KEY}&maxResults=12`;

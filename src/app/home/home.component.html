@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <section class="container-fluid">
-  <div class="home_page row" [ngClass]="{
+  <div class="home_page row" [class]="{
       background_image: showHomePage,
       background_for_first_questions: goToFirstQuestions,
       background_for_second_questions: goToSecondQuestions,
@@ -10,7 +10,7 @@
     }">
     <app-video-list *ngIf="goToVideoEducation"></app-video-list>
 
-    <div *ngIf="!goToVideoEducation" class="home_page_box_start col-md-10 col-lg-8 col-xxl-6" [ngClass]="{
+    <div *ngIf="!goToVideoEducation" class="home_page_box_start col-md-10 col-lg-8 col-xxl-6" [class]="{
         home_page_box_end: showHomePageBox,
         home_page_box_quiz_change: goToQuestions,
         home_page_box_summary_change: goToQuizSummary,
@@ -34,7 +34,7 @@
         <button class="random_questions_button rounded" (click)="randomQuestions()">
           <div>
             <span>Losowa kolejność pytań:
-              <span class="random_question_button_message" [ngClass]="{
+              <span class="random_question_button_message" [class]="{
                   random_questions_button_on: turnOnRandomQuestions
                 }">{{ onOffMessage }}</span>
             </span>
