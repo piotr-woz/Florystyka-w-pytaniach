@@ -6,11 +6,10 @@ import { SingleVideoInterface } from '../interfaces/single-video.interface';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-video-list',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './video-list.component.html',
-  styleUrl: './video-list.component.scss',
+    selector: 'app-video-list',
+    imports: [CommonModule],
+    templateUrl: './video-list.component.html',
+    styleUrl: './video-list.component.scss'
 })
 export class VideoListComponent implements OnInit {
   showVideoComponent: boolean = false;

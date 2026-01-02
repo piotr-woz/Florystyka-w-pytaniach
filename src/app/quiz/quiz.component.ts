@@ -8,11 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { Question } from './question.model';
 
 @Component({
-  selector: 'app-quiz',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SummaryComponent],
-  templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.scss'
+    selector: 'app-quiz',
+    imports: [CommonModule, FormsModule, SummaryComponent],
+    templateUrl: './quiz.component.html',
+    styleUrl: './quiz.component.scss'
 })
 export class QuizComponent implements OnInit {
   @Input() goToQuestions: boolean;
