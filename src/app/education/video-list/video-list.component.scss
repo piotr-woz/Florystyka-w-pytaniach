@@ -35,7 +35,7 @@
   box-shadow: 0 0 0 2px #ff66a3;
 }
 
-.home_page_link {
+.back-button {
   display: block;
   width: 40px;
   margin: 15px auto 20px auto;
@@ -43,15 +43,14 @@
   background-color: transparent;
   border-radius: 50%;
   box-shadow: 0 0 0 3px #ccb4d4;
-}
-
-.home_page_link_symbol {
-  position: relative;
-  top: 2.5px;
-  left: 6px;
-  font-size: 35px;
-  width: 40px;
-  height: 40px;
+  &__icon {
+    position: relative;
+    top: 2.5px;
+    left: 6px;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -65,7 +64,7 @@
     font-size: 2.5rem;
   }
 
-  .home_page_link {
+  .back-button {
     margin: 15px auto 80px auto;
   }
 }

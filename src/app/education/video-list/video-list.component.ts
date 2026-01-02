@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-video-list',
