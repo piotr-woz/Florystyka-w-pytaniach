@@ -6,11 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { Question } from '../quiz/question.model';
 
 @Component({
-  selector: 'app-summary',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './summary.component.html',
-  styleUrl: './summary.component.scss'
+    selector: 'app-summary',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './summary.component.html',
+    styleUrl: './summary.component.scss'
 })
 export class SummaryComponent implements OnInit {
   questionList: Question[] = [];

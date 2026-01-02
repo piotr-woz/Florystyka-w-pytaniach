@@ -4,7 +4,6 @@ import { SafePipe } from '../../safe.pipe';
 
 @Component({
   selector: 'app-video-frame',
-  standalone: true,
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
   styleUrl: './video-frame.component.scss',
