@@ -26,8 +26,5 @@ export class VideoListComponent implements OnInit {
       this.playlistItems = pl_items.items;
       this.playlistAuthor = pl_items.items[0].snippet.channelTitle;
     });
-    setTimeout(() => {
-      this.showVideoComponent = true;
-    }, 300);
   }
 }
