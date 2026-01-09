@@ -1,9 +1,11 @@
 @if (videoUrl()) {
-<iframe class="video" [src]="videoUrl() | safe" title="YouTube video player" frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen></iframe>
+<div class="video-wrapper">
+  <iframe class="video" [src]="videoUrl() | safe" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 }
 
-<a href="home" class="icon_back" (click)="backToVideoList()">
-  <span class="material-symbols-outlined icon_back_symbol">arrow_back_ios</span>
+<a href="home" class="back-button" (click)="backToVideoList()">
+  <span class="material-symbols-outlined back-button__icon">arrow_back_ios</span>
 </a>
