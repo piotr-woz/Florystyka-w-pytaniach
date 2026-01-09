@@ -1,12 +1,8 @@
-<iframe
-  class="video"
-  [src]="videoUrl | safe"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen
-></iframe>
+@if (videoUrl()) {
+<iframe class="video" [src]="videoUrl() | safe" title="YouTube video player" frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen></iframe>
+}
 
 <a href="home" class="icon_back" (click)="backToVideoList()">
   <span class="material-symbols-outlined icon_back_symbol">arrow_back_ios</span>
