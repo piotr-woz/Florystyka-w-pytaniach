@@ -6,18 +6,18 @@ import { QuizComponent } from '../quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'app-home',
-    imports: [
-        CommonModule,
-        HeaderComponent,
-        QuizComponent,
-        FormsModule,
-        VideoListComponent,
-    ],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss'
+  selector: 'app-home',
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    QuizComponent,
+    FormsModule,
+    VideoListComponent,
+  ],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit {
+export default class HomeComponent implements OnInit {
   showHomePage: boolean = false;
   showHomePageBox: boolean = false;
   goToQuestions: boolean = false;

@@ -1,4 +1,10 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SafePipe } from '../../safe.pipe';
 
@@ -7,8 +13,9 @@ import { SafePipe } from '../../safe.pipe';
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
   styleUrl: './video-frame.component.scss',
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class VideoFrameComponent implements OnInit {
+export default class VideoFrameComponent implements OnInit {
   protected readonly videoUrl = signal<string | null>(null);
 
   private route = inject(ActivatedRoute);

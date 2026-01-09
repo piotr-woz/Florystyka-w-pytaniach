@@ -1,12 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { VideoFrameComponent } from './education/video-frame/video-frame.component';
 // import { VideoListComponent } from './education/video-list/video-list.component';
 
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
+    loadComponent: () => import('./home/home.component'),
   },
   {
     path: '',
@@ -15,7 +13,8 @@ export const routes: Routes = [
   },
   {
     path: 'video',
-    component: VideoFrameComponent,
+    loadComponent: () =>
+      import('./education/video-frame/video-frame.component'),
   },
   // {
   //   path: 'video-list',
