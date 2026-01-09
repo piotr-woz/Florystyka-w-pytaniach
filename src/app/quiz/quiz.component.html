@@ -1,14 +1,11 @@
-<section
-  class="quiz_box_start"
-  [ngClass]="{ quiz_box_end: showQuizBox }"
-  *ngIf="goToQuestions"
->
+<section class="quiz_box_start" [ngClass]="{ quiz_box_end: showQuizBox }" *ngIf="goToQuestions">
   <div class="quiz_questions">
     <p>{{ idSentance }}</p>
     <p>{{ title }}</p>
     <ul>
       <li *ngFor="let answer of answers; let i = index">
-        <label [for]="i"><input type="radio" name="answers" [id]="i" [value]="i" (change)="onChange($event)"/>{{ answer }}</label>
+        <label [for]="i"><input type="radio" name="answers" [id]="i" [value]="i" (change)="onChange($event)" />{{ answer
+          }}</label>
       </li>
       <li>{{ answerAlert }}</li>
     </ul>
@@ -21,12 +18,8 @@
   </div>
 
   <div class="next_question_button">
-    <button
-      type="button"
-      class="next_question_button_start"
-      [ngClass]="{ next_question_button_end: showNextQuestionButton }"
-      (click)="nextQuestion(this.id)"
-    >
+    <button type="button" class="next_question_button_start"
+      [ngClass]="{ next_question_button_end: showNextQuestionButton }" (click)="nextQuestion(this.id)">
       Dalej
     </button>
   </div>
@@ -39,11 +32,7 @@
     {{ score }}/{{ numberOfQuestions }}
   </p>
   <div><img src="assets/floral-decoration.png" alt="logoImage" /></div>
-  <button
-    type="button"
-    class="summary_report_button"
-    (click)="showQuizSummaryReport()"
-  >
+  <button type="button" class="summary_report_button" (click)="showQuizSummaryReport()">
     Zobacz odpowiedzi
   </button>
 

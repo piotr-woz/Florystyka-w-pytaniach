@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Question } from '../quiz/question.model';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class SummaryService {
   #questionList: Question[] = [];
 

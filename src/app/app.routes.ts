@@ -4,18 +4,17 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'home',
-    loadComponent: () => import('./home/home.component'),
+    loadComponent: () => import('./home/home.component')
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
   {
     path: 'video',
-    loadComponent: () =>
-      import('./education/video-frame/video-frame.component'),
-  },
+    loadComponent: () => import('./education/video-frame/video-frame.component')
+  }
   // {
   //   path: 'video-list',
   //   component: VideoListComponent,

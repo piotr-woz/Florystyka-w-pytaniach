@@ -5,7 +5,7 @@ import {
   Input,
   OnInit,
   Output,
-  ChangeDetectionStrategy,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { QuestionsService } from './questions.service';
 import { SummaryService } from '../summary/summary.service';
@@ -18,7 +18,7 @@ import { Question } from './question.model';
   selector: 'app-quiz',
   imports: [CommonModule, FormsModule, SummaryComponent],
   templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.scss',
+  styleUrl: './quiz.component.scss'
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuizComponent implements OnInit {
@@ -94,10 +94,8 @@ export class QuizComponent implements OnInit {
     const randomAnswers = questions[this.currentQuestionIndex].answers.sort(
       () => 0.5 - Math.random()
     );
-    this.answers = randomAnswers.map((item) => item.answer);
-    this.correctAnswer = randomAnswers
-      .map((item) => item.isCorrect)
-      .indexOf(true);
+    this.answers = randomAnswers.map(item => item.answer);
+    this.correctAnswer = randomAnswers.map(item => item.isCorrect).indexOf(true);
     this.image = questions[this.currentQuestionIndex].image
       ? `assets/quiz_images/${questions[this.currentQuestionIndex].image}`
       : null;

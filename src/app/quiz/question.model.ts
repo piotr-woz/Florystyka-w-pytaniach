@@ -1,6 +1,6 @@
 export interface Question {
   title: string;
-  answers: {answer: string, isCorrect: boolean}[];
+  answers: { answer: string; isCorrect: boolean }[];
   image: string;
   id: number;
   questionName: string;

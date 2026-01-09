@@ -4,33 +4,20 @@
     <p>{{ question.title }}</p>
     <ul>
       <li *ngFor="let answer of question.answersInNewOrder; let i = index">
-        <label
-          [for]="i"
-          [ngClass]="{
+        <label [for]="i" [ngClass]="{
             green_text: i === question.correctAnswer,
             red_text: i !== question.correctAnswer && i === question.userAnswer
-          }"
-          ><input
-            type="radio"
-            [name]="question.questionName"
-            [id]="i"
-            [value]="i"
-            [checked]="i === question.userAnswer"
-          />
-          {{ answer }}</label
-        >
+          }"><input type="radio" [name]="question.questionName" [id]="i" [value]="i"
+            [checked]="i === question.userAnswer" />
+          {{ answer }}</label>
       </li>
     </ul>
     <figure>
-      <img
-        [src]="imagePath + question.image"
-        alt="quizImage"
-        *ngIf="question.image"
-      />
+      <img [src]="imagePath + question.image" alt="quizImage" *ngIf="question.image" />
     </figure>
   </div>
 </section>
 
-<a href="home" class="home_page_link"
-  ><p class="back_to_home_page">Powrót do strony głównej</p></a
->
+<a href="home" class="home_page_link">
+  <p class="back_to_home_page">Powrót do strony głównej</p>
+</a>

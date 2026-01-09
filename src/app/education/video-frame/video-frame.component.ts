@@ -1,10 +1,4 @@
-import {
-  Component,
-  inject,
-  OnInit,
-  signal,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SafePipe } from '../../safe.pipe';
 
@@ -13,7 +7,7 @@ import { SafePipe } from '../../safe.pipe';
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
   styleUrl: './video-frame.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class VideoFrameComponent implements OnInit {
   protected readonly videoUrl = signal<string | null>(null);
@@ -22,13 +16,11 @@ export default class VideoFrameComponent implements OnInit {
   private readonly YT_ID_REGEX = /^[a-zA-Z0-9_-]{11}$/;
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe(params => {
       const id = params['id'];
 
       if (this.isValidYoutubeId(id)) {
-        this.videoUrl.set(
-          `https://www.youtube.com/embed/${id}?si=Denm8vm_D5_7nnfW`
-        );
+        this.videoUrl.set(`https://www.youtube.com/embed/${id}?si=Denm8vm_D5_7nnfW`);
       } else {
         console.warn('Invalid video id', id);
         this.videoUrl.set(null);

@@ -7,15 +7,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    QuizComponent,
-    FormsModule,
-    VideoListComponent,
-  ],
+  imports: [CommonModule, HeaderComponent, QuizComponent, FormsModule, VideoListComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrl: './home.component.scss'
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class HomeComponent implements OnInit {

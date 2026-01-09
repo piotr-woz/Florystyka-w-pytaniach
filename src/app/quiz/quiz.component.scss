@@ -21,7 +21,6 @@
   transition: all 1s ease-out;
 }
 
-
 /* quiz questions */
 .quiz_questions {
   flex: 1 1 69%;
@@ -32,7 +31,7 @@
 }
 
 .quiz_questions p:nth-of-type(1) {
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Poetsen One', sans-serif;
   color: #80932b;
 }
 
@@ -56,7 +55,6 @@
   color: rgb(255, 62, 62);
 }
 
-
 /* quiz images */
 .quiz_images {
   flex: 0 1 auto;
@@ -76,7 +74,6 @@
   object-fit: cover;
 }
 
-
 /* next question button */
 .next_question_button {
   flex: 1 1 100%;
@@ -87,7 +84,7 @@
 
 .next_question_button_start {
   padding: 0 40px;
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Poetsen One', sans-serif;
   font-size: 1.8rem;
   line-height: 3.5rem;
   color: #ff66a3;
@@ -217,12 +214,11 @@
   }
 }
 
-
 /* quiz summary */
 .quiz_summary {
   margin-top: 40px;
   text-align: center;
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Poetsen One', sans-serif;
   font-size: 2.5rem;
   color: rgb(40, 40, 40);
 }
@@ -246,7 +242,7 @@
 }
 
 .poor_quiz_score {
-  color: #B81434 !important;
+  color: #b81434 !important;
 }
 
 .quiz_summary img {
@@ -257,7 +253,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 0 40px;
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Poetsen One', sans-serif;
   font-size: 1.8rem;
   line-height: 3.5rem;
   color: #80932b;

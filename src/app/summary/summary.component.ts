@@ -9,7 +9,7 @@ import { Question } from '../quiz/question.model';
   selector: 'app-summary',
   imports: [CommonModule, FormsModule],
   templateUrl: './summary.component.html',
-  styleUrl: './summary.component.scss',
+  styleUrl: './summary.component.scss'
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SummaryComponent implements OnInit {
