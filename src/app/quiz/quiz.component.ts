@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { QuestionsService } from './questions.service';
 import { SummaryService } from '../summary/summary.service';
 import { SummaryComponent } from '../summary/summary.component';
@@ -8,10 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { Question } from './question.model';
 
 @Component({
-    selector: 'app-quiz',
-    imports: [CommonModule, FormsModule, SummaryComponent],
-    templateUrl: './quiz.component.html',
-    styleUrl: './quiz.component.scss'
+  selector: 'app-quiz',
+  imports: [CommonModule, FormsModule, SummaryComponent],
+  templateUrl: './quiz.component.html',
+  styleUrl: './quiz.component.scss',
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuizComponent implements OnInit {
   @Input() goToQuestions: boolean;
@@ -36,7 +44,7 @@ export class QuizComponent implements OnInit {
   answers: string[];
   correctAnswer: number;
   image: string | null;
-  answerAlert: string = "";
+  answerAlert: string = '';
 
   currentQuestionIndex: number = 0;
   score: number = 0;
@@ -47,7 +55,10 @@ export class QuizComponent implements OnInit {
   arrayWithCorrectAnswerIndexes: number[] = [];
   arrayWithChosenQuestionIndexes: number[] = [];
 
-  constructor(private questionsService: QuestionsService, private summaryService: SummaryService) {}
+  constructor(
+    private questionsService: QuestionsService,
+    private summaryService: SummaryService
+  ) {}
 
   // landscape animations and random questions method
   ngOnInit() {
@@ -67,7 +78,9 @@ export class QuizComponent implements OnInit {
     }
     this.allQuestions.length = this.numberOfQuestions;
 
-    setTimeout(() => { this.showQuizBox = true }, timeToShowQuizBox);
+    setTimeout(() => {
+      this.showQuizBox = true;
+    }, timeToShowQuizBox);
     setTimeout(() => {
       this.showQuestions(this.allQuestions);
       this.showNextQuestionButton = true;
@@ -78,10 +91,16 @@ export class QuizComponent implements OnInit {
     this.id = questions[this.currentQuestionIndex].id;
     this.idSentance = `Pytanie ${questions[this.currentQuestionIndex].id}`;
     this.title = questions[this.currentQuestionIndex].title;
-    const randomAnswers = questions[this.currentQuestionIndex].answers.sort(() => 0.5 - Math.random());
-    this.answers = randomAnswers.map(item => item.answer);
-    this.correctAnswer = randomAnswers.map(item => item.isCorrect).indexOf(true);
-    this.image = questions[this.currentQuestionIndex].image ? `assets/quiz_images/${questions[this.currentQuestionIndex].image}` : null;
+    const randomAnswers = questions[this.currentQuestionIndex].answers.sort(
+      () => 0.5 - Math.random()
+    );
+    this.answers = randomAnswers.map((item) => item.answer);
+    this.correctAnswer = randomAnswers
+      .map((item) => item.isCorrect)
+      .indexOf(true);
+    this.image = questions[this.currentQuestionIndex].image
+      ? `assets/quiz_images/${questions[this.currentQuestionIndex].image}`
+      : null;
   }
 
   onChange(e: any): void {
@@ -90,7 +109,6 @@ export class QuizComponent implements OnInit {
 
   nextQuestion(id: number): void {
     if (this.chosenQuestionIndex >= 0) {
-
       if (this.chosenQuestionIndex === this.correctAnswer) {
         this.score++;
       }
@@ -132,7 +150,8 @@ export class QuizComponent implements OnInit {
     this.allQuestions.forEach((item, index) => {
       item['answersInNewOrder'] = this.arrayWithAnswersInNewOrder[index];
       item['correctAnswer'] = this.arrayWithCorrectAnswerIndexes[index];
-      item['userAnswer'] = this.arrayWithChosenQuestionIndexes[index]});
+      item['userAnswer'] = this.arrayWithChosenQuestionIndexes[index];
+    });
     this.summaryService.addQuestionList(this.allQuestions);
     this.goToQuizSummaryReport = true;
     this.quizSummaryReportStarted.emit(this.goToQuizSummaryReport);

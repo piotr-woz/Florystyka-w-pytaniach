@@ -13,7 +13,7 @@ import { SafePipe } from '../../safe.pipe';
   imports: [SafePipe],
   templateUrl: './video-frame.component.html',
   styleUrl: './video-frame.component.scss',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class VideoFrameComponent implements OnInit {
   protected readonly videoUrl = signal<string | null>(null);

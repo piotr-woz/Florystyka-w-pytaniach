@@ -1,14 +1,20 @@
-import { Component, OnInit, inject } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
 
 @Component({
-    selector: 'app-video-list',
-    imports: [CommonModule],
-    templateUrl: './video-list.component.html',
-    styleUrl: './video-list.component.scss'
+  selector: 'app-video-list',
+  imports: [CommonModule],
+  templateUrl: './video-list.component.html',
+  styleUrl: './video-list.component.scss',
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VideoListComponent implements OnInit {
   showVideoComponent: boolean = false;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { VideoListComponent } from '../education/video-list/video-list.component';
 import { QuizComponent } from '../quiz/quiz.component';
@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class HomeComponent implements OnInit {
   showHomePage: boolean = false;
