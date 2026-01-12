@@ -1,31 +1,29 @@
-import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-video-list',
   imports: [CommonModule, RouterLink],
   templateUrl: './video-list.component.html',
   styleUrl: './video-list.component.scss',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class VideoListComponent implements OnInit {
-  showVideoComponent: boolean = false;
+  private readonly playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
 
-  playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
-
-  playlistAuthor: string = '';
-  playlistItems: SingleVideoInterface[] = [];
+  protected readonly playlistAuthor = signal('');
+  protected readonly playlistItems = signal<SingleVideoInterface[]>([]);
 
   private apiService = inject(ApiService);
 
   ngOnInit(): void {
     this.apiService.getPlayListItems(this.playlistId).subscribe(pl_items => {
-      this.playlistItems = pl_items.items;
-      this.playlistAuthor = pl_items.items[0].snippet.channelTitle;
+      this.playlistItems.set(pl_items.items);
+      this.playlistAuthor.set(pl_items.items[0].snippet.channelTitle);
     });
   }
 }
