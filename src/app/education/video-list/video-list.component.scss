@@ -1,15 +1,10 @@
 .entering {
-  animation: slide-fade 0.8s ease-out 0.6s both;
-}
-
-@keyframes slide-fade {
-  from {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out 0.6s;
+  @starting-style {
     opacity: 0;
     transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

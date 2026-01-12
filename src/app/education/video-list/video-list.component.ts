@@ -1,5 +1,4 @@
 import { Component, OnInit, inject, ChangeDetectionStrategy, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
@@ -7,7 +6,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-video-list',
-  imports: [CommonModule, RouterLink],
+  imports: [RouterLink],
   templateUrl: './video-list.component.html',
   styleUrl: './video-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
