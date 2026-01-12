@@ -1,15 +1,14 @@
 import { Component, OnInit, inject, ChangeDetectionStrategy, signal } from '@angular/core';
-import { ApiService } from '../api.service';
-
-import { SingleVideoInterface } from '../interfaces/single-video.interface';
 import { RouterLink } from '@angular/router';
+import { SingleVideoInterface } from '../interfaces/single-video.interface';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-video-list',
   imports: [RouterLink],
   templateUrl: './video-list.component.html',
   styleUrl: './video-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class VideoListComponent implements OnInit {
   private readonly playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
