@@ -1,12 +1,21 @@
 <div class="container">
-  <header>
+  <header class="header">
     <nav class="navbar navbar-dark bg-header navbar-expand-xl ps-md-4 mt-md-3 mx-md-3 rounded">
+      @if (isVideoList()) {
+      <a routerLink="/home">
+        <div class="page_logo rounded">
+          <span><img src="assets/floral-decoration.png" alt="logoImage" /></span>
+          <p>Florystyka w pytaniach</p>
+        </div>
+      </a>
+      } @else {
       <a href="home">
         <div class="page_logo rounded">
           <span><img src="assets/floral-decoration.png" alt="logoImage" /></span>
           <p>Florystyka w pytaniach</p>
         </div>
       </a>
+      }
     </nav>
   </header>
 </div>
