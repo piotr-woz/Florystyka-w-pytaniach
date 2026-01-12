@@ -2,6 +2,23 @@ $video-green-color: #b5b76b;
 $video-pink-color: #ccb4d4;
 $video-pink-color-hover: #ff66a3;
 
+.video-list-wrapper {
+  min-height: 100vh;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(../../../assets/home_flowers_mobile.jpg);
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .video-list-wrapper {
+    background-image: url(../../../assets/home_flowers_desktop.jpg);
+  }
+}
+
 .video-list {
   margin-top: 14.5rem;
   &__header {

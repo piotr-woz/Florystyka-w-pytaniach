@@ -1,20 +1,24 @@
-<div class="video-list container" animate.enter="entering" animate.leave="leaving">
-  <header class="video-list__header">
-    <span>Edukacja florystyczna z </span><span>{{ playlistAuthor() }}</span>
-  </header>
+<app-header />
 
-  <div class="video-list__box row">
-    @for (item of playlistItems(); track item.id) {
-    <div class="video-list__video col-sm-6 col-md-4 col-lg-3">
-      <a routerLink="/video-list/video" [queryParams]="{ id: item.snippet.resourceId.videoId }">
-        <img class="video-list__video-thumbnail" [src]="item.snippet.thumbnails.medium.url"
-          [alt]="item.snippet.title" />
-      </a>
+<div class="video-list-wrapper">
+  <div class="video-list container" animate.enter="entering" animate.leave="leaving">
+    <header class="video-list__header">
+      <span>Edukacja florystyczna z </span><span>{{ playlistAuthor() }}</span>
+    </header>
+
+    <div class="video-list__box row">
+      @for (item of playlistItems(); track item.id) {
+      <div class="video-list__video col-sm-6 col-md-4 col-lg-3">
+        <a routerLink="/video-list/video" [queryParams]="{ id: item.snippet.resourceId.videoId }">
+          <img class="video-list__video-thumbnail" [src]="item.snippet.thumbnails.medium.url"
+            [alt]="item.snippet.title" />
+        </a>
+      </div>
+      }
     </div>
-    }
-  </div>
 
-  <a routerLink="/home" class="back-button">
-    <span class="material-symbols-outlined back-button__icon">arrow_back_ios</span>
-  </a>
+    <a routerLink="/home" class="back-button">
+      <span class="material-symbols-outlined back-button__icon">arrow_back_ios</span>
+    </a>
+  </div>
 </div>

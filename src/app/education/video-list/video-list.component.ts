@@ -2,10 +2,11 @@ import { Component, OnInit, inject, ChangeDetectionStrategy, signal } from '@ang
 import { RouterLink } from '@angular/router';
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
 import { ApiService } from '../api.service';
+import { HeaderComponent } from '../../header/header.component';
 
 @Component({
   selector: 'app-video-list',
-  imports: [RouterLink],
+  imports: [HeaderComponent, RouterLink],
   templateUrl: './video-list.component.html',
   styleUrl: './video-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
