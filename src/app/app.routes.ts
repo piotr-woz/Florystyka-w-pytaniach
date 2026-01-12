@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-// import { VideoListComponent } from './education/video-list/video-list.component';
 
 export const routes: Routes = [
   {
@@ -12,11 +11,11 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'video',
-    loadComponent: () => import('./education/video-frame/video-frame.component')
-  },
-  {
     path: 'video-list',
     loadComponent: () => import('./education/video-list/video-list.component')
+  },
+  {
+    path: 'video-list/video',
+    loadComponent: () => import('./education/video-frame/video-frame.component')
   }
 ];

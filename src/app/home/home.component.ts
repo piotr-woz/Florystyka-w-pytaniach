@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-// import { VideoListComponent } from '../education/video-list/video-list.component';
 import { QuizComponent } from '../quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
@@ -23,7 +22,6 @@ export default class HomeComponent implements OnInit {
   goToQuizSummary: boolean = false;
   goToQuizSummaryReport: boolean = false;
   turnOnRandomQuestions: boolean = false;
-  goToVideoEducation: boolean = false;
 
   numberOfQuestions: number;
   enteredName: string = '';
@@ -32,8 +30,6 @@ export default class HomeComponent implements OnInit {
   onOffMessage: string = 'wyłączona';
 
   ngOnInit() {
-    // to remove!!!
-    // this.backToVideoList_start();
     setTimeout(() => {
       this.showHomePage = true;
     }, 25);
@@ -41,14 +37,6 @@ export default class HomeComponent implements OnInit {
       this.showHomePageBox = true;
     }, 900);
   }
-
-  // to remove!!!
-  // backToVideoList_start(): void {
-  //   if (sessionStorage.getItem('value') === 'back') {
-  //     this.goToVideoEducation = true;
-  //   }
-  //   sessionStorage.clear();
-  // }
 
   startQuiz(numberOfQuestions: number): void {
     this.userName = this.enteredName;
@@ -92,8 +80,4 @@ export default class HomeComponent implements OnInit {
   homePageBoxSummaryReportChange(goToQuizSummaryReport: boolean): void {
     this.goToQuizSummaryReport = goToQuizSummaryReport;
   }
-
-  // videoEducation(): void {
-  //   this.goToVideoEducation = true;
-  // }
 }

@@ -31,8 +31,4 @@ export default class VideoFrameComponent implements OnInit {
   private isValidYoutubeId(id: unknown): id is string {
     return typeof id === 'string' && this.YT_ID_REGEX.test(id);
   }
-
-  // backToVideoList(): void {
-  //   sessionStorage.setItem('value', 'back');
-  // }
 }
