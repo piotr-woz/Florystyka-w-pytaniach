@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 import { ApiService } from '../api.service';
 
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-video-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './video-list.component.html',
-  styleUrl: './video-list.component.scss'
+  styleUrl: './video-list.component.scss',
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class VideoListComponent implements OnInit {
+export default class VideoListComponent implements OnInit {
   showVideoComponent: boolean = false;
 
   playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';

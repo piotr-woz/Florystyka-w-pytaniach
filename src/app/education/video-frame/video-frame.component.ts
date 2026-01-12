@@ -1,10 +1,10 @@
 import { Component, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SafePipe } from '../../safe.pipe';
 
 @Component({
   selector: 'app-video-frame',
-  imports: [SafePipe],
+  imports: [SafePipe, RouterLink],
   templateUrl: './video-frame.component.html',
   styleUrl: './video-frame.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -32,7 +32,7 @@ export default class VideoFrameComponent implements OnInit {
     return typeof id === 'string' && this.YT_ID_REGEX.test(id);
   }
 
-  backToVideoList(): void {
-    sessionStorage.setItem('value', 'back');
-  }
+  // backToVideoList(): void {
+  //   sessionStorage.setItem('value', 'back');
+  // }
 }

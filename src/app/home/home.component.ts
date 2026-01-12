@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { VideoListComponent } from '../education/video-list/video-list.component';
+// import { VideoListComponent } from '../education/video-list/video-list.component';
 import { QuizComponent } from '../quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HeaderComponent, QuizComponent, FormsModule, VideoListComponent],
+  imports: [CommonModule, HeaderComponent, QuizComponent, FormsModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
   // changeDetection: ChangeDetectionStrategy.OnPush,
@@ -32,7 +33,7 @@ export default class HomeComponent implements OnInit {
 
   ngOnInit() {
     // to remove!!!
-    this.backToVideoList_start();
+    // this.backToVideoList_start();
     setTimeout(() => {
       this.showHomePage = true;
     }, 25);
@@ -42,12 +43,12 @@ export default class HomeComponent implements OnInit {
   }
 
   // to remove!!!
-  backToVideoList_start(): void {
-    if (sessionStorage.getItem('value') === 'back') {
-      this.goToVideoEducation = true;
-    }
-    sessionStorage.clear();
-  }
+  // backToVideoList_start(): void {
+  //   if (sessionStorage.getItem('value') === 'back') {
+  //     this.goToVideoEducation = true;
+  //   }
+  //   sessionStorage.clear();
+  // }
 
   startQuiz(numberOfQuestions: number): void {
     this.userName = this.enteredName;
@@ -92,7 +93,7 @@ export default class HomeComponent implements OnInit {
     this.goToQuizSummaryReport = goToQuizSummaryReport;
   }
 
-  videoEducation(): void {
-    this.goToVideoEducation = true;
-  }
+  // videoEducation(): void {
+  //   this.goToVideoEducation = true;
+  // }
 }

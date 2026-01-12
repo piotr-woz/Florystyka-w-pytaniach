@@ -14,9 +14,9 @@ export const routes: Routes = [
   {
     path: 'video',
     loadComponent: () => import('./education/video-frame/video-frame.component')
+  },
+  {
+    path: 'video-list',
+    loadComponent: () => import('./education/video-list/video-list.component')
   }
-  // {
-  //   path: 'video-list',
-  //   component: VideoListComponent,
-  // },
 ];

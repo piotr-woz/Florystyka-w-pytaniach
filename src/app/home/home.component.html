@@ -8,7 +8,7 @@
       background_for_third_questions: goToThirdQuestions,
       home_page_summary_change: goToQuizSummary
     }">
-    <app-video-list *ngIf="goToVideoEducation"></app-video-list>
+    <!-- <app-video-list *ngIf="goToVideoEducation"></app-video-list> -->
 
     <div *ngIf="!goToVideoEducation" class="home_page_box_start col-md-10 col-lg-8 col-xxl-6" [class]="{
         home_page_box_end: showHomePageBox,
@@ -41,7 +41,8 @@
           </div>
         </button>
 
-        <button class="video_education_button rounded" (click)="videoEducation()">
+        <!-- <button class="video_education_button rounded" (click)="videoEducation()"> -->
+        <button class="video_education_button rounded" routerLink="/video-list" >
           <span>Edukacja florystyczna</span>
           <span class="material-symbols-outlined">videocam</span>
         </button>
