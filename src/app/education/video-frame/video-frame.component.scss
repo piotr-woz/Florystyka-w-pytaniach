@@ -1,4 +1,4 @@
-$video-green-color: #b5b76b;
+$video-button-green-color: #b5b76b;
 
 .video {
   width: 100%;
@@ -13,8 +13,8 @@ $video-green-color: #b5b76b;
   transform: translateX(-50%);
   border-radius: 50%;
   background-color: transparent;
-  color: $video-green-color;
-  box-shadow: 0 0 0 0.5rem $video-green-color;
+  color: $video-button-green-color;
+  box-shadow: 0 0 0 0.5rem $video-button-green-color;
   &__icon {
     position: relative;
     top: 0.25rem;

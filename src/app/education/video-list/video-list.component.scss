@@ -1,6 +1,6 @@
-$video-green-color: #b5b76b;
-$video-pink-color: #ccb4d4;
-$video-pink-color-hover: #ff66a3;
+$video-list-green-color: #b5b76b;
+$video-list-pink-color-hover: #ff66a3;
+$video-button-violet-color: #ccb4d4;
 
 .video-list-wrapper {
   min-height: 100vh;
@@ -23,7 +23,7 @@ $video-pink-color-hover: #ff66a3;
   margin-top: 14.5rem;
   &__header {
     margin-bottom: 1rem;
-    color: $video-green-color;
+    color: $video-list-green-color;
     font-family: 'Poetsen One', sans-serif;
     font-size: 2rem;
     text-align: center;
@@ -33,7 +33,7 @@ $video-pink-color-hover: #ff66a3;
   }
   &__box {
     margin: 0;
-    border: 2px solid $video-green-color;
+    border: 2px solid $video-list-green-color;
     border-radius: 6px;
   }
   &__video {
@@ -42,7 +42,7 @@ $video-pink-color-hover: #ff66a3;
   &__video-thumbnail {
     width: 100%;
     &:hover {
-      box-shadow: 0 0 0 0.2rem $video-pink-color-hover;
+      box-shadow: 0 0 0 0.2rem $video-list-pink-color-hover;
     }
   }
 }
@@ -86,8 +86,8 @@ $video-pink-color-hover: #ff66a3;
   margin: 1.5rem auto 8rem;
   border-radius: 50%;
   background-color: transparent;
-  color: $video-pink-color;
-  box-shadow: 0 0 0 0.3rem $video-pink-color;
+  color: $video-button-violet-color;
+  box-shadow: 0 0 0 0.3rem $video-button-violet-color;
   &__icon {
     position: relative;
     top: 0.25rem;
