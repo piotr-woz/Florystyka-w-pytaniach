@@ -1,6 +1,9 @@
 <app-header />
 
 <div class="video-list-wrapper">
+  @if (isLoading()) {
+  <div class="loader">Ładowanie...</div>
+  } @else if (playlistItems().length > 0) {
   <div class="video-list container" animate.enter="entering" animate.leave="leaving">
     <header class="video-list__header">
       <span>Edukacja florystyczna z </span><span>{{ playlistAuthor() }}</span>
@@ -21,4 +24,7 @@
       <span class="material-symbols-outlined back-button__icon">arrow_back_ios</span>
     </a>
   </div>
+  } @else if (errorMessage()) {
+  <div class="error-message">{{ errorMessage() }}</div>
+  }
 </div>
