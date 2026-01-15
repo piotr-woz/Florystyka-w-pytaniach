@@ -6,7 +6,7 @@ import {
   signal,
   computed
 } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { SingleVideoInterface } from '../interfaces/single-video.interface';
 import { ApiService } from '../api.service';
 import { HeaderComponent } from '../../header/header.component';
@@ -21,7 +21,8 @@ import { HeaderComponent } from '../../header/header.component';
 export default class VideoListComponent {
   private readonly playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
   private apiService = inject(ApiService);
-  private router = inject(Router);
+
+  isTransition = signal(true);
 
   // protected readonly playlistAuthor = signal('');
   // protected readonly playlistItems = signal<SingleVideoInterface[]>([]);
@@ -47,4 +48,8 @@ export default class VideoListComponent {
   protected readonly playlistItems = computed<SingleVideoInterface[]>(
     () => this.playlistResource.value()?.items ?? []
   );
+
+  onTransitionEnd(): void {
+    this.isTransition.set(false);
+  }
 }

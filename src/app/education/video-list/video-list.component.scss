@@ -22,8 +22,10 @@ $video-button-violet-color: #ccb4d4;
 }
 
 .video-list {
-  view-transition-name: video-list;
   margin-top: 14.5rem;
+  &--view-transition-leaving {
+    view-transition-name: video-list;
+  }
   &__header {
     margin-bottom: 1rem;
     color: $video-list-green-color;

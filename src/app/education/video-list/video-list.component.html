@@ -4,7 +4,8 @@
   @if (isLoading()) {
   <div class="loader">Ładowanie...</div>
   } @else if (playlistItems().length > 0) {
-  <div class="video-list container" animate.enter="entering">
+  <div class="video-list container" animate.enter="entering"
+    [class.video-list--view-transition-leaving]="isTransition()">
     <header class="video-list__header">
       <span>Edukacja florystyczna z </span><span>{{ playlistAuthor() }}</span>
     </header>
@@ -12,7 +13,8 @@
     <div class="video-list__box row">
       @for (item of playlistItems(); track item.id) {
       <div class="video-list__video col-sm-6 col-md-4 col-lg-3">
-        <a routerLink="/video-list/video" [queryParams]="{ id: item.snippet.resourceId.videoId }">
+        <a (click)="onTransitionEnd()" routerLink="/video-list/video"
+          [queryParams]="{ id: item.snippet.resourceId.videoId }">
           <img class="video-list__video-thumbnail" [src]="item.snippet.thumbnails.medium.url"
             [alt]="item.snippet.title" />
         </a>
