@@ -4,7 +4,7 @@
   @if (isLoading()) {
   <div class="loader">Ładowanie...</div>
   } @else if (playlistItems().length > 0) {
-  <div class="video-list container" animate.enter="entering" animate.leave="leaving">
+  <div class="video-list container" animate.enter="entering">
     <header class="video-list__header">
       <span>Edukacja florystyczna z </span><span>{{ playlistAuthor() }}</span>
     </header>
