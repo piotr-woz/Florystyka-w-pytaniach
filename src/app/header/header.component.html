@@ -2,18 +2,19 @@
   <nav class="header__navbar navbar navbar-expand-xl ps-md-4 mt-md-3 mx-md-3">
     @if (isVideoList()) {
     <a routerLink="/home">
-      <div class="header__logo logo">
-        <span><img class="logo__image" src="assets/floral-decoration.png" alt="logoImage" /></span>
-        <p class="logo__text">Florystyka w pytaniach</p>
-      </div>
+      <ng-container *ngTemplateOutlet="logoContent"></ng-container>
     </a>
     } @else {
     <a href="home">
-      <div class="header__logo logo">
-        <span><img class="logo__image" src="assets/floral-decoration.png" alt="logoImage" /></span>
-        <p class="logo__text">Florystyka w pytaniach</p>
-      </div>
+      <ng-container *ngTemplateOutlet="logoContent"></ng-container>
     </a>
     }
   </nav>
 </header>
+
+<ng-template #logoContent>
+  <div class="header__logo logo">
+    <span><img class="logo__image" src="assets/floral-decoration.png" alt="logoImage" /></span>
+    <p class="logo__text">Florystyka w pytaniach</p>
+  </div>
+</ng-template>

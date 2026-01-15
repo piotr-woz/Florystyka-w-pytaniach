@@ -22,7 +22,7 @@ export default class VideoListComponent {
   private readonly playlistId = 'PLaJ3Q2SV-7LvhzOfqcmq_VsfarNTL43N2';
   private apiService = inject(ApiService);
 
-  isTransition = signal(true);
+  readonly isTransition = signal(true);
 
   // protected readonly playlistAuthor = signal('');
   // protected readonly playlistItems = signal<SingleVideoInterface[]>([]);

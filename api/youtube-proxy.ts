@@ -44,15 +44,10 @@ module.exports = async (request: any, response: any) => {
       return response.status(youtubeResponse.status).json(data);
     }
 
-    response.setHeader(
-      'Cache-Control',
-      's-maxage=60, stale-while-revalidate=300'
-    );
+    response.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=300');
     return response.status(200).json(data);
   } catch (err: any) {
-    return response
-      .status(500)
-      .json({ error: 'Server Error', message: err.message });
+    return response.status(500).json({ error: 'Server Error', message: err.message });
   }
 };
 
@@ -62,3 +57,5 @@ module.exports = async (request: any, response: any) => {
 // npm install dotenv
 
 // npx vercel dev
+
+// npm i -D vercel@latest
