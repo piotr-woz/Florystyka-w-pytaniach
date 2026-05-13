@@ -1,0 +1,43 @@
+# --- DANE WRAŻLIWE I KONFIGURACJA ---
+**/.env
+**/.env.*
+**/.env.local
+**/.env.development
+**/.env.production
+**/.env.test
+**/.env.*.local
+
+**/credentials/
+**/secrets/
+**/proxy.conf.json
+**/auth-config.ts
+
+# --- ARTEFAKTY BUDOWANIA I ZALEŻNOŚCI ---
+**/node_modules/
+**/dist/
+**/.angular/
+**/.cache/
+**/coverage/
+
+# --- CERTYFIKATY I KLUCZE ---
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pub
+
+# --- TESTY I LOGI ---
+**/cypress/videos/
+**/cypress/screenshots/
+**/*.log
+**/npm-debug.log*
+
+# --- INFRASTRUKTURA I DANE LOKALNE ---
+**/.vscode/
+**/.idea/
+**/.git/
+**/.github/
+**/tmp/
+
+# --- DANE TESTOWE (MOCKI) ---
+# Odkomentuj, jeśli masz tam dane wrażliwe klientów
+# **/src/assets/mocks/*.json
